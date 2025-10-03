@@ -125,14 +125,14 @@ async def transcribe_audio_part(
         subject=str(subject) if subject else None
     )
 
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=port,
-        reload=False,
-        timeout_keep_alive=900,
-        timeout_graceful_shutdown=900
-    )
+# if __name__ == "__main__":
+#     import uvicorn
+#
+#     uvicorn.run(
+#         "main:app",
+#         host="0.0.0.0",
+#         port=port,
+#         reload=False,
+#         timeout_keep_alive=900,
+#         timeout_graceful_shutdown=900
+#     )
