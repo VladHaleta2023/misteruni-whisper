@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+faster-whisper
+python-dotenv
+pydantic
+g4f[all]
+spacy
+gTTS
+boto3
+httpx
