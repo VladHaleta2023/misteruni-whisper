@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 from faster_whisper import WhisperModel
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional
 from dotenv import load_dotenv
 import tempfile
 import subprocess
