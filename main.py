@@ -26,7 +26,7 @@ port = int(os.getenv("PORT", 8080))
 
 app = FastAPI()
 
-whisper_model = WhisperModel("base", device="cpu", compute_type="int8")
+whisper_model = WhisperModel("small", device="cpu", compute_type="int8")
 
 MAX_FILE_SIZE = 10 * 1024 * 1024
 
@@ -125,14 +125,14 @@ async def transcribe_audio_part(
         subject=str(subject) if subject else None
     )
 
-# if __name__ == "__main__":
-#     import uvicorn
-#
-#     uvicorn.run(
-#         "main:app",
-#         host="0.0.0.0",
-#         port=port,
-#         reload=False,
-#         timeout_keep_alive=900,
-#         timeout_graceful_shutdown=900
-#     )
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=port,
+        reload=False,
+        timeout_keep_alive=900,
+        timeout_graceful_shutdown=900
+    )
